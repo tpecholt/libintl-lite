@@ -1,0 +1,41 @@
+# expression
+E -> D E'
+E'-> ? E : E
+E' -> eps
+
+# disjunction
+D -> C D'
+D' -> || C
+D' -> eps 
+
+# conjunction
+C -> R C'
+C' -> && R
+C' -> eps
+
+# relative op
+R -> F R'
+R' -> == F
+R' -> != F
+R' -> >= F
+R' -> > F
+R' -> <= F
+R' -> < F
+R' -> eps
+
+# factor
+F -> n
+F -> number
+F -> ( E )
+
+# FIRST
+E	n 0-9 ( eps
+E'	? eps
+D	n 0-9 ( eps	
+D'	|| eps
+C	n 0-9 ( eps
+C'      && eps
+R	n 0-9 (
+R'	= > < eps
+F	n 0-9 (
+
