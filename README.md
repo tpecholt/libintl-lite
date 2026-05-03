@@ -18,7 +18,7 @@ Differences from original *libintl-lite* library:
 
 Add this to your CMake:
 ```
-option()
+option(LIBINTL_BUILD_TESTS "" OFF)
 add_subdirectory(libintl-lite)
 ...
 target_link_libraries(myapp PRIVATE libintl)
