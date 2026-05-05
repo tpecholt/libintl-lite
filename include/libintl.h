@@ -2,12 +2,8 @@
 
 #include <string_view>
 
-#ifdef _WIN32
-#ifdef LIBINTL_LITE_EXPORTS
+#if defined(_WIN32) && defined(LIBINTL_LITE_EXPORTS)
 #define LIBINTL_LITE_API __declspec(dllexport)
-#else
-#define LIBINTL_LITE_API __declspec(dllimport)
-#endif
 #else
 #define LIBINTL_LITE_API
 #endif
