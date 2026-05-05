@@ -2,6 +2,9 @@
 #include <fstream>
 #include <filesystem>
 #include <sstream>
+#include <vector>
+#include <algorithm>
+#include <limits.h>
 
 namespace
 {

@@ -6,8 +6,10 @@
 #ifdef LIBINTL_LITE_EXPORTS
 #define LIBINTL_LITE_API __declspec(dllexport)
 #else
-#define LIBINTL_LITE_API __declspec(dllexport)
+#define LIBINTL_LITE_API __declspec(dllimport)
 #endif
+#else
+#define LIBINTL_LITE_API
 #endif
 
 extern "C" {
